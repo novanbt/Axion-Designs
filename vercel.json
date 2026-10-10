@@ -1,18 +1,10 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "cleanUrls": true,
   "functions": {
     "server.js": {
-      "includeFiles": [
-        "index.html",
-        "book-service.html",
-        "*.css",
-        "*.js",
-        "*.png",
-        "*.ico",
-        "*.jpg",
-        "data/**"
-      ]
+      "includeFiles": "**"
     }
   },
   "rewrites": [

@@ -1,5 +1,54 @@
 [
   {
+    "bookingId": "AX-2026-C86B",
+    "createdAt": "2026-10-10T11:45:19.831Z",
+    "status": "new_enquiry",
+    "submissionSource": "dedicated_web_booking_page",
+    "service": {
+      "id": 2,
+      "name": "Modular Kitchen and Wardrobe Design",
+      "slug": "modular-kitchen-and-wardrobe-design"
+    },
+    "project": {
+      "name": "Penthouse Aurora",
+      "propertyType": "Apartment / Flat",
+      "city": "Bengaluru",
+      "area": "Indiranagar",
+      "address": "100 Feet Road, 4th Block",
+      "approxArea": 1850,
+      "areaUnit": "sq. ft.",
+      "status": "Ready for interior work",
+      "description": "Modern minimalist kitchen with quartz island and walk-in wardrobe.",
+      "serviceSpecificDetails": {
+        "answers": [
+          "Both Kitchen & Wardrobes",
+          "Hafele hardware preferred"
+        ]
+      }
+    },
+    "planning": {
+      "budgetRange": "₹10 lakh – ₹20 lakh",
+      "timeline": "Within 1–3 months",
+      "consultationDate": "2026-10-25",
+      "consultationTime": "Morning (10:00 AM – 1:00 PM)",
+      "consultationMethod": "Video Call",
+      "meetingLocation": "",
+      "additionalNotes": "Need 3D renders before civil commencement"
+    },
+    "contact": {
+      "fullName": "Dr. Priya V. Menon",
+      "countryCode": "+91",
+      "mobile": "9845012345",
+      "email": "priya.menon@example.com",
+      "whatsapp": "9845012345",
+      "preferredMethod": "WhatsApp"
+    },
+    "consent": {
+      "agreed": true,
+      "timestamp": "2026-10-10T11:45:19.831Z"
+    }
+  },
+  {
     "bookingId": "AX-2026-CMEY",
     "createdAt": "2026-10-10T11:32:47.086Z",
     "status": "new_enquiry",

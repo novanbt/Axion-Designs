@@ -44,9 +44,8 @@ assert(hasApiIdRewrite, 'vercel.json rewrites /api/bookings/:id to query paramet
 
 // 2b. vercel.json Functions & Bundling Verification
 assert(vercelConfig.functions && vercelConfig.functions['server.js'], 'vercel.json defines functions["server.js"] config');
-assert(Array.isArray(vercelConfig.functions['server.js'].includeFiles), 'vercel.json includes static files in server.js function bundle');
-const includesIndex = vercelConfig.functions['server.js'].includeFiles.includes('index.html');
-assert(includesIndex, 'vercel.json includeFiles explicitly bundles index.html for root route');
+assert(typeof vercelConfig.functions['server.js'].includeFiles === 'string', 'vercel.json includeFiles is a valid glob pattern string (satisfies Vercel schema validator)');
+assert(vercelConfig.functions['server.js'].includeFiles.includes('**'), 'vercel.json includeFiles matches project files with glob pattern');
 
 // 2c. .vercelignore Verification
 assert(fs.existsSync('.vercelignore'), '.vercelignore exists');
