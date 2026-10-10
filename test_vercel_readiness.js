@@ -42,6 +42,11 @@ assert(hasBookServiceRewrite, 'vercel.json rewrites /book-service to /book-servi
 const hasApiIdRewrite = vercelConfig.rewrites.some(r => r.source === '/api/bookings/:id');
 assert(hasApiIdRewrite, 'vercel.json rewrites /api/bookings/:id to query parameter');
 
+// 2b. .vercelignore Verification
+assert(fs.existsSync('.vercelignore'), '.vercelignore exists');
+const vercelIgnoreContent = fs.readFileSync('.vercelignore', 'utf8');
+assert(vercelIgnoreContent.includes('server.js'), '.vercelignore excludes server.js from hijacking Vercel deployment');
+
 // 3. package.json Verification
 assert(fs.existsSync('package.json'), 'package.json exists');
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
