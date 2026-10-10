@@ -1,0 +1,20 @@
+{
+  "name": "axion-designs",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Axion Designs — Bespoke Antigravity Interior Architecture Studio",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test_booking_system.js"
+  },
+  "keywords": [
+    "interior-design",
+    "architecture",
+    "antigravity",
+    "booking-system",
+    "luxury-interiors"
+  ],
+  "author": "Axion Designs Studio",
+  "license": "MIT"
+}

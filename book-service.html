@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Book a bespoke interior architecture and design consultation with Axion Designs. Choose from 15 specialized design disciplines.">
+  <meta name="keywords" content="interior design booking, consultation, residential interior, modular kitchen, turnkey interior design, Axion Designs">
+  <meta name="author" content="Axion Designs Studio">
+  
+  <title>Book a Consultation — Axion Designs</title>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Book a Consultation — Axion Designs">
+  <meta property="og:description" content="Plan your interior transformation with Axion Designs. Select your discipline, project requirements, budget, and preferred consultation schedule.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/booking.css">
+</head>
+<body class="booking-body">
+
+  <!-- =========================================================================
+       BOOKING NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="booking-header" id="booking-header">
+    <div class="booking-header-inner">
+      <a href="/" class="booking-brand" aria-label="Axion Designs Home">
+        <img src="logo.png" alt="Axion Designs Logo" class="booking-brand-logo">
+        <div class="booking-brand-text">
+          <span class="booking-brand-name">Axion Designs</span>
+          <span class="booking-brand-sub">Architectural Practice</span>
+        </div>
+      </a>
+
+      <div class="booking-header-actions">
+        <div class="booking-concierge-badge">
+          <span class="concierge-dot" aria-hidden="true"></span>
+          <span>Studio Concierge Online</span>
+        </div>
+        <a href="/" class="btn-back-home">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Return to Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN BOOKING WIZARD
+       ========================================================================= -->
+  <main class="booking-main" id="booking-main">
+
+    <!-- Hero / Dynamic Heading Section -->
+    <header class="wizard-header" id="wizard-header">
+      <div class="wizard-eyebrow-row">
+        <span class="wizard-eyebrow-text" id="wizard-eyebrow">Project Initiation • Step 1 of 5</span>
+      </div>
+      <h1 class="wizard-step-title" id="wizard-title">What Can We Help You Design?</h1>
+      <p class="wizard-step-desc" id="wizard-desc">
+        Choose the service that best matches your project. We'll collect a few details to understand your requirements and help you take the next step.
+      </p>
+    </header>
+
+    <!-- Stepper Navigation Progress Bar -->
+    <nav class="stepper-nav" aria-label="Booking Progress" id="stepper-nav">
+      <div class="stepper-track-bg" aria-hidden="true"></div>
+      <div class="stepper-track-fill" id="stepper-track-fill" aria-hidden="true"></div>
+      
+      <ol class="stepper-list">
+        <li class="stepper-item is-active" data-step="1" id="step-node-1">
+          <button type="button" class="stepper-bubble" aria-label="Go to Step 1: Select Service">
+            <span class="step-num">01</span>
+            <svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <span class="stepper-label">Service</span>
+        </li>
+        <li class="stepper-item" data-step="2" id="step-node-2">
+          <button type="button" class="stepper-bubble" aria-label="Step 2: Project Details" disabled>
+            <span class="step-num">02</span>
+            <svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <span class="stepper-label">Project</span>
+        </li>
+        <li class="stepper-item" data-step="3" id="step-node-3">
+          <button type="button" class="stepper-bubble" aria-label="Step 3: Budget & Timeline" disabled>
+            <span class="step-num">03</span>
+            <svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <span class="stepper-label">Planning</span>
+        </li>
+        <li class="stepper-item" data-step="4" id="step-node-4">
+          <button type="button" class="stepper-bubble" aria-label="Step 4: Contact Details" disabled>
+            <span class="step-num">04</span>
+            <svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <span class="stepper-label">Contact</span>
+        </li>
+        <li class="stepper-item" data-step="5" id="step-node-5">
+          <button type="button" class="stepper-bubble" aria-label="Step 5: Review & Submit" disabled>
+            <span class="step-num">05</span>
+            <svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </button>
+          <span class="stepper-label">Review</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Context Ribbon (Shows in Steps 2-5) -->
+    <div class="selected-service-banner" id="selected-service-banner" style="display: none;">
+      <div class="selected-service-info">
+        <img src="" alt="" class="selected-service-thumb" id="banner-thumb">
+        <div class="selected-service-meta">
+          <span class="selected-service-tag" id="banner-tag">Discipline 01 • Residential</span>
+          <h2 class="selected-service-title" id="banner-title">Residential Interior Design</h2>
+        </div>
+      </div>
+      <button type="button" class="btn-change-service" id="btn-change-service" aria-label="Change Selected Service">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+        </svg>
+        <span>Change Discipline</span>
+      </button>
+    </div>
+
+    <!-- Booking Form Wizard -->
+    <form id="booking-form" novalidate autocomplete="on">
+      <!-- Anti-spam Honeypot Field -->
+      <input type="text" name="hp_website" id="hp_website" style="display: none !important; tab-index: -1;" autocomplete="off" aria-hidden="true">
+
+      <!-- =====================================================================
+           STEP 1: Choose Your Service (All 15 Disciplines)
+           ===================================================================== -->
+      <section class="wizard-step-panel is-active" id="step-panel-1" aria-labelledby="wizard-title">
+        <div class="services-select-grid" id="services-grid" role="radiogroup" aria-label="Select one primary interior design service">
+          <!-- Populated by JavaScript or fallback cards -->
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           STEP 2: Tell Us About Your Project
+           ===================================================================== -->
+      <section class="wizard-step-panel" id="step-panel-2" aria-labelledby="step-2-heading">
+        <div class="form-step-container">
+
+          <!-- Property Type -->
+          <div class="form-section-block">
+            <h2 class="form-block-title" id="step-2-heading">
+              <span>Property Type</span>
+              <span class="field-required-marker" aria-label="Required">*</span>
+            </h2>
+            <p class="form-block-desc">Select the category that matches your space.</p>
+            <div class="options-grid-cards" role="radiogroup" id="property-type-group" aria-label="Property Type Options">
+              <!-- Dynamically populated or rendered choices -->
+            </div>
+            <div class="form-error-msg" id="err-property-type">Please select a property type to proceed.</div>
+          </div>
+
+          <!-- Project Identity & Location -->
+          <div class="form-section-block">
+            <h2 class="form-block-title">Project Location & Identity</h2>
+            <p class="form-block-desc">Specify where the interior site is located.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="input-project-name" class="form-label">
+                  <span>Project Name</span>
+                  <span class="form-label-optional">(Optional)</span>
+                </label>
+                <input type="text" id="input-project-name" name="projectName" class="form-input" placeholder="e.g., The Skyline Penthouse / Green Glen Villa">
+              </div>
+
+              <div class="form-group">
+                <label for="input-city" class="form-label">
+                  <span>City</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <input type="text" id="input-city" name="city" class="form-input" placeholder="e.g., Bengaluru, Mumbai, Delhi NCR" required>
+                <div class="form-error-msg" id="err-city">Please provide the project city.</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="input-area" class="form-label">
+                  <span>Area / Locality</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <input type="text" id="input-area" name="area" class="form-input" placeholder="e.g., Indiranagar, Koramangala, Bandra" required>
+                <div class="form-error-msg" id="err-area">Please specify the local area or locality.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="input-address" class="form-label">
+                  <span>Site Address</span>
+                  <span class="form-label-optional">(Optional at this stage)</span>
+                </label>
+                <input type="text" id="input-address" name="address" class="form-input" placeholder="Apartment / building name, road">
+              </div>
+            </div>
+          </div>
+
+          <!-- Property Size & Status -->
+          <div class="form-section-block">
+            <h2 class="form-block-title">Scale & Current Status</h2>
+            <p class="form-block-desc">Helps us allocate the right design team and estimate milestone timelines.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="input-approx-area" class="form-label">
+                  <span>Approximate Space Area</span>
+                  <span class="form-label-optional">(Optional if unknown)</span>
+                </label>
+                <div class="area-input-wrapper">
+                  <input type="number" id="input-approx-area" name="approxArea" class="form-input" placeholder="e.g., 1850" min="50" max="50000">
+                  <div class="area-unit-group" role="group" aria-label="Unit of Area">
+                    <button type="button" class="area-unit-btn is-active" data-unit="sq. ft.">sq. ft.</button>
+                    <button type="button" class="area-unit-btn" data-unit="sq. m.">sq. m.</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Project Status</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <select id="select-project-status" name="projectStatus" class="form-select" required style="background-color: #12151D; color: #FFFFFF;">
+                  <option value="" disabled selected style="background-color: #12151D; color: #8F939E;">Select current property status...</option>
+                  <option value="Planning a new project" style="background-color: #12151D; color: #FFFFFF;">Planning a new project</option>
+                  <option value="Property under construction" style="background-color: #12151D; color: #FFFFFF;">Property under construction</option>
+                  <option value="Ready for interior work" style="background-color: #12151D; color: #FFFFFF;">Ready for interior work</option>
+                  <option value="Renovating an existing space" style="background-color: #12151D; color: #FFFFFF;">Renovating an existing space</option>
+                  <option value="Looking for consultation only" style="background-color: #12151D; color: #FFFFFF;">Looking for consultation only</option>
+                </select>
+                <div class="form-error-msg" id="err-status">Please select the current project status.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Service-Specific Question Box -->
+          <div class="dynamic-questions-wrapper" id="dynamic-questions-wrapper">
+            <div class="dynamic-q-title" id="dynamic-q-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Discipline Specific Scope</span>
+            </div>
+            <p class="dynamic-q-sub" id="dynamic-q-sub">Tailored detail for your selected service.</p>
+            <div id="dynamic-q-content">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Project Description & Requirements -->
+          <div class="form-section-block">
+            <div class="form-group">
+              <label for="input-description" class="form-label">
+                <span>Project Description & Requirements</span>
+                <span class="form-label-optional">(Optional)</span>
+              </label>
+              <textarea 
+                id="input-description" 
+                name="description" 
+                class="form-textarea" 
+                placeholder="Tell us about your space, design preferences, requirements, or anything else we should know."
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           STEP 3: Budget and Timeline
+           ===================================================================== -->
+      <section class="wizard-step-panel" id="step-panel-3" aria-labelledby="step-3-heading">
+        <div class="form-step-container">
+
+          <!-- Indicative Budget -->
+          <div class="form-section-block">
+            <h2 class="form-block-title" id="step-3-heading">
+              <span>Let's Plan Your Project</span>
+              <span class="field-required-marker">*</span>
+            </h2>
+            <p class="form-block-desc">Select your target investment bracket and timeline expectations. This helps us suggest fitting material palettes and finishes.</p>
+            
+            <div class="options-grid-cards" role="radiogroup" id="budget-range-group" aria-label="Budget Range Options">
+              <!-- Populated by JS -->
+            </div>
+            <div class="form-error-msg" id="err-budget">Please choose an indicative budget range.</div>
+
+            <div class="indicative-disclaimer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span><strong>Note:</strong> These are indicative project budget ranges to help us tailor our material recommendations, not binding quotations or guaranteed prices.</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="form-section-block">
+            <h2 class="form-block-title">
+              <span>Preferred Project Timeline</span>
+              <span class="field-required-marker">*</span>
+            </h2>
+            <p class="form-block-desc">When do you expect work or consultation to commence?</p>
+
+            <div class="options-grid-cards" role="radiogroup" id="timeline-group" aria-label="Timeline Options">
+              <!-- Populated by JS -->
+            </div>
+            <div class="form-error-msg" id="err-timeline">Please choose your preferred timeline.</div>
+          </div>
+
+          <!-- Consultation Schedule & Mode -->
+          <div class="form-section-block">
+            <h2 class="form-block-title">Consultation Schedule & Preferences</h2>
+            <p class="form-block-desc">Tell us when and how you would prefer to connect. Date and slot are preferences subject to concierge alignment.</p>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="input-consult-date" class="form-label">
+                  <span>Preferred Date</span>
+                  <span class="form-label-optional">(Optional)</span>
+                </label>
+                <input type="date" id="input-consult-date" name="consultDate" class="form-input">
+                <div class="form-error-msg" id="err-consult-date">Date cannot be in the past.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="select-consult-time" class="form-label">
+                  <span>Preferred Time Slot</span>
+                  <span class="form-label-optional">(Optional)</span>
+                </label>
+                <select id="select-consult-time" name="consultTime" class="form-select" style="background-color: #12151D; color: #FFFFFF;">
+                  <option value="Flexible / Any Time" style="background-color: #12151D; color: #FFFFFF;">Flexible / Any Time</option>
+                  <option value="Morning (10:00 AM – 1:00 PM)" style="background-color: #12151D; color: #FFFFFF;">Morning (10:00 AM – 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM – 5:00 PM)" style="background-color: #12151D; color: #FFFFFF;">Afternoon (1:00 PM – 5:00 PM)</option>
+                  <option value="Evening (5:00 PM – 8:00 PM)" style="background-color: #12151D; color: #FFFFFF;">Evening (5:00 PM – 8:00 PM)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Consultation Method</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <select id="select-consult-method" name="consultMethod" class="form-select" required style="background-color: #12151D; color: #FFFFFF;">
+                  <option value="Phone Call" selected style="background-color: #12151D; color: #FFFFFF;">Phone Call</option>
+                  <option value="Video Call" style="background-color: #12151D; color: #FFFFFF;">Video Call (Google Meet / Zoom)</option>
+                  <option value="In Person" style="background-color: #12151D; color: #FFFFFF;">In Person (Studio or Site)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- In-person meeting location field (conditional) -->
+            <div class="form-group" id="in-person-location-group" style="display: none;">
+              <label for="input-meeting-location" class="form-label">
+                <span>Preferred In-Person Meeting Location</span>
+              </label>
+              <input type="text" id="input-meeting-location" name="meetingLocation" class="form-input" placeholder="e.g., Axion Studio Indiranagar, or On-site at the property address">
+            </div>
+
+            <div class="form-group">
+              <label for="input-additional-requirements" class="form-label">
+                <span>Additional Consultation Requirements</span>
+                <span class="form-label-optional">(Optional)</span>
+              </label>
+              <input type="text" id="input-additional-requirements" name="additionalNotes" class="form-input" placeholder="e.g., Language preference, specific drawings already prepared, etc.">
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           STEP 4: Your Contact Details
+           ===================================================================== -->
+      <section class="wizard-step-panel" id="step-panel-4" aria-labelledby="step-4-heading">
+        <div class="form-step-container">
+
+          <div class="form-section-block">
+            <h2 class="form-block-title" id="step-4-heading">
+              <span>How Can We Reach You?</span>
+              <span class="field-required-marker">*</span>
+            </h2>
+            <p class="form-block-desc">We will use these details solely to coordinate your architectural consultation and deliver your project scope.</p>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="input-full-name" class="form-label">
+                  <span>Full Name</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <input type="text" id="input-full-name" name="fullName" class="form-input" placeholder="e.g., Aarav Sharma" required autocomplete="name">
+                <div class="form-error-msg" id="err-full-name">Please enter your full name.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="input-mobile" class="form-label">
+                  <span>Mobile Number</span>
+                  <span class="field-required-marker">*</span>
+                </label>
+                <div class="phone-input-wrapper">
+                  <div class="phone-prefix-badge">
+                    <span>🇮🇳</span>
+                    <span>+91</span>
+                  </div>
+                  <input type="tel" id="input-mobile" name="mobile" class="form-input" placeholder="98765 43210" required maxlength="15" autocomplete="tel">
+                </div>
+                <div class="form-error-msg" id="err-mobile">Please enter a valid 10-digit mobile number.</div>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="input-email" class="form-label">
+                  <span>Email Address</span>
+                  <span class="form-label-optional">(Optional)</span>
+                </label>
+                <input type="email" id="input-email" name="email" class="form-input" placeholder="e.g., aarav.sharma@example.com" autocomplete="email">
+                <div class="form-error-msg" id="err-email">Please provide a valid email format.</div>
+              </div>
+
+              <div class="form-group">
+                <label for="input-whatsapp" class="form-label">
+                  <span>WhatsApp Number</span>
+                  <span class="form-label-optional">(Optional if different)</span>
+                </label>
+                <input type="tel" id="input-whatsapp" name="whatsapp" class="form-input" placeholder="Leave blank if same as mobile">
+              </div>
+            </div>
+
+            <!-- Preferred Communication Channel -->
+            <div class="form-group">
+              <label class="form-label">
+                <span>Preferred Contact Channel</span>
+                <span class="field-required-marker">*</span>
+              </label>
+              <div class="options-grid-cards-3" role="radiogroup" id="contact-method-group">
+                <div class="choice-card is-selected" data-value="Phone Call" tabindex="0" role="radio" aria-checked="true">
+                  <div class="choice-card-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="choice-card-title">Phone Call</div>
+                  <div class="choice-card-sub">Direct conversation with architect</div>
+                </div>
+
+                <div class="choice-card" data-value="WhatsApp" tabindex="0" role="radio" aria-checked="false">
+                  <div class="choice-card-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                  </div>
+                  <div class="choice-card-title">WhatsApp</div>
+                  <div class="choice-card-sub">Fast messaging & moodboard links</div>
+                </div>
+
+                <div class="choice-card" data-value="Email" tabindex="0" role="radio" aria-checked="false">
+                  <div class="choice-card-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="choice-card-title">Email</div>
+                  <div class="choice-card-sub">Formal design briefs & summaries</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           STEP 5: Review and Submit
+           ===================================================================== -->
+      <section class="wizard-step-panel" id="step-panel-5" aria-labelledby="step-5-heading">
+        <div class="form-step-container">
+
+          <div class="form-section-block">
+            <h2 class="form-block-title" id="step-5-heading">Review Your Booking Request</h2>
+            <p class="form-block-desc">Inspect all details before submission. You can click 'Edit' on any section to revise information without losing your data.</p>
+          </div>
+
+          <div class="review-cards-list">
+            <!-- Review Card 1: Selected Service -->
+            <article class="review-card" id="rev-card-service">
+              <div class="review-card-header">
+                <h3 class="review-card-heading">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  <span>1. Selected Discipline</span>
+                </h3>
+                <button type="button" class="btn-edit-step" data-target-step="1" aria-label="Edit Selected Service">Edit</button>
+              </div>
+              <div class="review-details-grid">
+                <div class="review-item">
+                  <span class="review-item-label">Discipline Name</span>
+                  <span class="review-item-value" id="rev-service-name">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Discipline Category</span>
+                  <span class="review-item-value" id="rev-service-category">—</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review Card 2: Project Details -->
+            <article class="review-card" id="rev-card-project">
+              <div class="review-card-header">
+                <h3 class="review-card-heading">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                  <span>2. Project & Property Details</span>
+                </h3>
+                <button type="button" class="btn-edit-step" data-target-step="2" aria-label="Edit Project Details">Edit</button>
+              </div>
+              <div class="review-details-grid">
+                <div class="review-item">
+                  <span class="review-item-label">Property Type</span>
+                  <span class="review-item-value" id="rev-property-type">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Location</span>
+                  <span class="review-item-value" id="rev-location">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Approximate Area</span>
+                  <span class="review-item-value" id="rev-area">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Current Status</span>
+                  <span class="review-item-value" id="rev-status">—</span>
+                </div>
+                <div class="review-item review-item-full" id="rev-dynamic-row" style="display: none;">
+                  <span class="review-item-label" id="rev-dynamic-label">Special Scope</span>
+                  <span class="review-item-value" id="rev-dynamic-val">—</span>
+                </div>
+                <div class="review-item review-item-full" id="rev-desc-row">
+                  <span class="review-item-label">Client Notes & Description</span>
+                  <span class="review-item-value" id="rev-desc">—</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review Card 3: Planning & Schedule -->
+            <article class="review-card" id="rev-card-planning">
+              <div class="review-card-header">
+                <h3 class="review-card-heading">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                  <span>3. Budget & Consultation Schedule</span>
+                </h3>
+                <button type="button" class="btn-edit-step" data-target-step="3" aria-label="Edit Budget and Schedule">Edit</button>
+              </div>
+              <div class="review-details-grid">
+                <div class="review-item">
+                  <span class="review-item-label">Indicative Budget</span>
+                  <span class="review-item-value" id="rev-budget">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Target Timeline</span>
+                  <span class="review-item-value" id="rev-timeline">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Preferred Date & Slot</span>
+                  <span class="review-item-value" id="rev-consult-slot">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Consultation Method</span>
+                  <span class="review-item-value" id="rev-consult-method">—</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review Card 4: Contact Information -->
+            <article class="review-card" id="rev-card-contact">
+              <div class="review-card-header">
+                <h3 class="review-card-heading">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <span>4. Client Contact Details</span>
+                </h3>
+                <button type="button" class="btn-edit-step" data-target-step="4" aria-label="Edit Contact Details">Edit</button>
+              </div>
+              <div class="review-details-grid">
+                <div class="review-item">
+                  <span class="review-item-label">Client Name</span>
+                  <span class="review-item-value" id="rev-full-name">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Mobile Number</span>
+                  <span class="review-item-value" id="rev-mobile">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Email Address</span>
+                  <span class="review-item-value" id="rev-email">—</span>
+                </div>
+                <div class="review-item">
+                  <span class="review-item-label">Preferred Channel</span>
+                  <span class="review-item-value" id="rev-preferred-channel">—</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Consent Checkbox -->
+          <div class="consent-terms-card">
+            <label class="consent-checkbox-row" for="input-consent">
+              <input type="checkbox" id="input-consent" name="consent" required>
+              <span class="consent-label-text">
+                I agree to be contacted regarding this service enquiry and have read the <a href="#" id="link-privacy-policy">Privacy Policy</a>.
+              </span>
+            </label>
+            <div class="form-error-msg" id="err-consent">You must accept the terms before submitting your booking.</div>
+          </div>
+
+          <!-- Global Form Submission Error Banner -->
+          <div class="indicative-disclaimer" id="global-submit-error" style="display: none; background: rgba(255, 90, 95, 0.12); border-color: #FF5A5F; color: #FFB4B6;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+            <span id="global-error-text">An error occurred while transmitting your request. Please review your entries and try again.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           STEP 6: Dedicated Confirmation State
+           ===================================================================== -->
+      <section class="wizard-step-panel" id="step-panel-confirmation" aria-labelledby="confirm-heading">
+        <div class="confirmation-card">
+          <div class="confirm-icon-ring" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+
+          <h2 class="confirm-heading" id="confirm-heading">Your Request Has Been Received!</h2>
+          <p class="confirm-subtext">
+            Thank you for choosing us for your interior design project. Your enquiry has been submitted successfully. Our architectural team will review your requirements and contact you using your preferred contact method.
+          </p>
+
+          <div class="confirm-ref-badge-box">
+            <span class="ref-label">Booking Reference</span>
+            <span class="ref-id-code" id="confirm-ref-code">AX-2026-XXXX</span>
+            <button type="button" class="btn-copy-ref" id="btn-copy-ref" title="Copy Reference Code" aria-label="Copy Reference Code">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quick Recap Table -->
+          <div class="confirm-recap-table">
+            <div>
+              <div class="recap-row-label">Selected Discipline</div>
+              <div class="recap-row-val" id="confirm-service-name">—</div>
+            </div>
+            <div>
+              <div class="recap-row-label">Project Location</div>
+              <div class="recap-row-val" id="confirm-location">—</div>
+            </div>
+            <div>
+              <div class="recap-row-label">Target Timeline</div>
+              <div class="recap-row-val" id="confirm-timeline">—</div>
+            </div>
+            <div>
+              <div class="recap-row-label">Requested Consultation</div>
+              <div class="recap-row-val" id="confirm-date-slot">—</div>
+            </div>
+          </div>
+
+          <!-- Next Steps Roadmap -->
+          <div class="confirm-steps-roadmap">
+            <h3 class="roadmap-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>What Happens Next?</span>
+            </h3>
+            <ol class="roadmap-timeline">
+              <li>
+                <span class="roadmap-num">1</span>
+                <div class="roadmap-text">
+                  <h4>Architectural Assessment</h4>
+                  <p>Our principal designer will inspect your requirements, spatial footprint, and indicative budget within 4 business hours.</p>
+                </div>
+              </li>
+              <li>
+                <span class="roadmap-num">2</span>
+                <div class="roadmap-text">
+                  <h4>Slot Confirmation</h4>
+                  <p>We will contact you via your preferred communication channel to confirm your requested consultation slot.</p>
+                </div>
+              </li>
+              <li>
+                <span class="roadmap-num">3</span>
+                <div class="roadmap-text">
+                  <h4>Discovery & Moodboard Session</h4>
+                  <p>A comprehensive 1-on-1 strategy meeting discussing floorplan zoning, material palettes, and preliminary 3D concept direction.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <!-- Actions -->
+          <div class="confirm-actions-row">
+            <a href="/" class="btn-wizard-next" style="text-decoration: none;">
+              <span>Return to Homepage</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <button type="button" class="btn-wizard-back" id="btn-print-receipt">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              <span>Print / Save Receipt</span>
+            </button>
+            <button type="button" class="btn-wizard-back" id="btn-reset-booking">
+              <span>Book Another Service</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- =========================================================================
+       STICKY WIZARD ACTION BAR (Previous & Continue Buttons)
+       ========================================================================= -->
+  <footer class="wizard-bottom-bar" id="wizard-bottom-bar">
+    <div class="wizard-bottom-inner">
+      <div class="wizard-status-pill">
+        <span id="bottom-status-text">Step <strong>1</strong> of 5 • Choose Your Service</span>
+      </div>
+
+      <div class="wizard-nav-btns">
+        <button type="button" class="btn-wizard-back" id="btn-wizard-prev" disabled>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Previous Step</span>
+        </button>
+
+        <button type="button" class="btn-wizard-next" id="btn-wizard-next" disabled>
+          <span id="next-btn-text">Continue</span>
+          <svg class="icon-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       PRIVACY POLICY ACCESSIBLE DIALOG
+       ========================================================================= -->
+  <dialog class="privacy-modal" id="privacy-modal" aria-labelledby="privacy-title">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+      <h3 id="privacy-title" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-main);">Client Confidentiality & Privacy</h3>
+      <button type="button" id="btn-close-privacy" style="background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0.5rem;" aria-label="Close Privacy Dialog">✕</button>
+    </div>
+    <div style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; max-height: 60vh; overflow-y: auto; padding-right: 0.5rem;">
+      <p style="margin-bottom: 1rem;">
+        At Axion Designs, we hold the highest standards of architectural confidentiality. Any project information, property drawings, and contact details you provide are processed strictly for assessing your project requirements and scheduling your consultation.
+      </p>
+      <p style="margin-bottom: 1rem;">
+        <strong>Data Protection Principles:</strong>
+      </p>
+      <ul style="padding-left: 1.25rem; margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+        <li>We never sell, rent, or distribute client contact information to third-party telemarketers.</li>
+        <li>Submissions are encrypted and stored in secure private studio archives.</li>
+        <li>You may request complete erasure of your consultation request at any time by contacting our studio desk.</li>
+      </ul>
+      <p>
+        For inquiries regarding our design records, please write to our concierge at <em>concierge@axiondesigns.com</em>.
+      </p>
+    </div>
+    <div style="margin-top: 2rem; text-align: right;">
+      <button type="button" id="btn-dismiss-privacy" class="btn-wizard-next" style="padding: 0.5rem 1.5rem; font-size: 0.85rem;">I Understand</button>
+    </div>
+  </dialog>
+
+  <!-- JavaScript Controller -->
+  <script src="js/booking.js" type="module"></script>
+</body>
+</html>
