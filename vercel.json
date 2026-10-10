@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/bookings/:id", "destination": "/api/bookings?id=:id" },
+    { "source": "/book-service", "destination": "/book-service.html" }
+  ]
+}

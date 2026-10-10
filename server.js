@@ -6,8 +6,9 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PORT = 5173;
-const DATA_DIR = path.join(__dirname, 'data');
+const PORT = process.env.PORT || 5173;
+const IS_VERCEL = Boolean(process.env.VERCEL);
+const DATA_DIR = IS_VERCEL ? '/tmp' : path.join(__dirname, 'data');
 const BOOKINGS_FILE = path.join(DATA_DIR, 'bookings.json');
 
 // Ensure data directory and bookings store exist
@@ -15,7 +16,16 @@ if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 if (!fs.existsSync(BOOKINGS_FILE)) {
-  fs.writeFileSync(BOOKINGS_FILE, JSON.stringify([], null, 2), 'utf8');
+  const seedFile = path.join(__dirname, 'data', 'bookings.json');
+  if (fs.existsSync(seedFile)) {
+    try {
+      fs.copyFileSync(seedFile, BOOKINGS_FILE);
+    } catch {
+      fs.writeFileSync(BOOKINGS_FILE, JSON.stringify([], null, 2), 'utf8');
+    }
+  } else {
+    fs.writeFileSync(BOOKINGS_FILE, JSON.stringify([], null, 2), 'utf8');
+  }
 }
 
 const MIME_TYPES = {
@@ -240,9 +250,9 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // API Route: GET /api/bookings/:id
-  if (req.method === 'GET' && pathname.startsWith('/api/bookings/')) {
-    const targetId = pathname.replace('/api/bookings/', '').trim();
+  // API Route: GET /api/bookings/:id or /api/bookings?id=...
+  if (req.method === 'GET' && (pathname.startsWith('/api/bookings/') || (pathname === '/api/bookings' && parsedUrl.searchParams.get('id')))) {
+    const targetId = (parsedUrl.searchParams.get('id') || pathname.replace('/api/bookings/', '')).trim();
     const bookings = readBookings();
     const match = bookings.find(b => b.bookingId.toLowerCase() === targetId.toLowerCase());
 
