@@ -42,15 +42,22 @@ assert(hasBookServiceRewrite, 'vercel.json rewrites /book-service to /book-servi
 const hasApiIdRewrite = vercelConfig.rewrites.some(r => r.source === '/api/bookings/:id');
 assert(hasApiIdRewrite, 'vercel.json rewrites /api/bookings/:id to query parameter');
 
-// 2b. .vercelignore Verification
+// 2b. vercel.json Functions & Bundling Verification
+assert(vercelConfig.functions && vercelConfig.functions['server.js'], 'vercel.json defines functions["server.js"] config');
+assert(Array.isArray(vercelConfig.functions['server.js'].includeFiles), 'vercel.json includes static files in server.js function bundle');
+const includesIndex = vercelConfig.functions['server.js'].includeFiles.includes('index.html');
+assert(includesIndex, 'vercel.json includeFiles explicitly bundles index.html for root route');
+
+// 2c. .vercelignore Verification
 assert(fs.existsSync('.vercelignore'), '.vercelignore exists');
 const vercelIgnoreContent = fs.readFileSync('.vercelignore', 'utf8');
-assert(vercelIgnoreContent.includes('server.js'), '.vercelignore excludes server.js from hijacking Vercel deployment');
+assert(!vercelIgnoreContent.includes('server.js'), '.vercelignore does NOT exclude server.js (ensures Vercel finds entrypoint)');
 
 // 3. package.json Verification
 assert(fs.existsSync('package.json'), 'package.json exists');
 const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-assert(!pkg.main || pkg.main !== 'server.js', 'package.json does NOT define "main": "server.js" (prevents legacy server hijack)');
+assert(pkg.main === 'server.js', 'package.json defines "main": "server.js" for Vercel Node.js runtime entrypoint');
+assert(pkg.scripts && pkg.scripts.build, 'package.json defines build script for Vercel');
 assert(pkg.scripts && pkg.scripts.start, 'package.json preserves start script for local dev');
 
 // 4. Serverless Functions in api/

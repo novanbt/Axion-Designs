@@ -1,9 +1,11 @@
 {
   "name": "axion-designs",
   "version": "1.0.0",
+  "main": "server.js",
   "type": "module",
   "description": "Axion Designs — Bespoke Antigravity Interior Architecture Studio",
   "scripts": {
+    "build": "echo 'Axion Designs deployment ready'",
     "start": "node server.js",
     "test": "node test_booking_system.js && node test_vercel_readiness.js"
   },

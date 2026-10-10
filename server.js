@@ -298,14 +298,19 @@ const server = http.createServer((req, res) => {
   } else if (pathname === '/' || pathname === '') {
     pathname = '/index.html';
   } else if (pathname === '/favicon.ico' || pathname === '/favicon.png') {
-    pathname = '/logo.png';
+    const iconFile = pathname.replace(/^\/+/, '');
+    if (!fs.existsSync(path.join(process.cwd(), iconFile)) && !fs.existsSync(path.join(__dirname, iconFile))) {
+      pathname = '/logo.png';
+    }
   }
 
   // Resolve file path across __dirname and process.cwd() for local & cloud runtime compatibility
+  const cleanPath = pathname.replace(/^\/+/, '');
   const candidatePaths = [
-    path.join(__dirname, pathname),
-    path.join(process.cwd(), pathname.replace(/^\//, '')),
-    path.resolve('.', pathname.replace(/^\//, ''))
+    path.join(__dirname, cleanPath),
+    path.join(process.cwd(), cleanPath),
+    path.resolve(process.cwd(), cleanPath),
+    path.resolve(__dirname, cleanPath)
   ];
 
   let resolvedPath = candidatePaths[0];
@@ -342,11 +347,9 @@ const server = http.createServer((req, res) => {
   });
 });
 
-if (!process.env.VERCEL) {
-  server.listen(PORT, '127.0.0.1', () => {
-    console.log(`Axion Designs server running at http://localhost:${PORT}`);
-    console.log(`Booking endpoint ready at http://localhost:${PORT}/book-service`);
-  });
-}
+server.listen(PORT, () => {
+  console.log(`Axion Designs server running at http://localhost:${PORT}`);
+  console.log(`Booking endpoint ready at http://localhost:${PORT}/book-service`);
+});
 
 export default server;

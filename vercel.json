@@ -1,9 +1,22 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "functions": {
+    "server.js": {
+      "includeFiles": [
+        "index.html",
+        "book-service.html",
+        "*.css",
+        "*.js",
+        "*.png",
+        "*.ico",
+        "*.jpg",
+        "data/**"
+      ]
+    }
+  },
   "rewrites": [
     { "source": "/api/bookings/:id", "destination": "/api/bookings?id=:id" },
-    { "source": "/book-service", "destination": "/book-service.html" },
-    { "source": "/", "destination": "/index.html" }
+    { "source": "/book-service", "destination": "/book-service.html" }
   ]
 }
