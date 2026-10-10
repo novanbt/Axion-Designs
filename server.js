@@ -293,23 +293,37 @@ const server = http.createServer((req, res) => {
   }
 
   // Page Routing & URL mapping:
-  // Dedicated route /book-service or /book-service/ -> /book-service.html
   if (pathname === '/book-service' || pathname === '/book-service/') {
     pathname = '/book-service.html';
-  } else if (pathname === '/') {
+  } else if (pathname === '/' || pathname === '') {
     pathname = '/index.html';
+  } else if (pathname === '/favicon.ico' || pathname === '/favicon.png') {
+    pathname = '/logo.png';
   }
 
-  const filePath = path.join(__dirname, pathname);
+  // Resolve file path across __dirname and process.cwd() for local & cloud runtime compatibility
+  const candidatePaths = [
+    path.join(__dirname, pathname),
+    path.join(process.cwd(), pathname.replace(/^\//, '')),
+    path.resolve('.', pathname.replace(/^\//, ''))
+  ];
 
-  fs.stat(filePath, (err, stats) => {
+  let resolvedPath = candidatePaths[0];
+  for (const p of candidatePaths) {
+    if (fs.existsSync(p)) {
+      resolvedPath = p;
+      break;
+    }
+  }
+
+  fs.stat(resolvedPath, (err, stats) => {
     if (err || !stats.isFile()) {
       res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
       res.end('404 Page Not Found');
       return;
     }
 
-    const ext = path.extname(filePath).toLowerCase();
+    const ext = path.extname(resolvedPath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
     res.writeHead(200, {
@@ -323,12 +337,16 @@ const server = http.createServer((req, res) => {
       return;
     }
 
-    const stream = fs.createReadStream(filePath);
+    const stream = fs.createReadStream(resolvedPath);
     stream.pipe(res);
   });
 });
 
-server.listen(PORT, '127.0.0.1', () => {
-  console.log(`Axion Designs server running at http://localhost:${PORT}`);
-  console.log(`Booking endpoint ready at http://localhost:${PORT}/book-service`);
-});
+if (!process.env.VERCEL) {
+  server.listen(PORT, '127.0.0.1', () => {
+    console.log(`Axion Designs server running at http://localhost:${PORT}`);
+    console.log(`Booking endpoint ready at http://localhost:${PORT}/book-service`);
+  });
+}
+
+export default server;

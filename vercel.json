@@ -3,6 +3,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/api/bookings/:id", "destination": "/api/bookings?id=:id" },
-    { "source": "/book-service", "destination": "/book-service.html" }
+    { "source": "/book-service", "destination": "/book-service.html" },
+    { "source": "/", "destination": "/index.html" }
   ]
 }
